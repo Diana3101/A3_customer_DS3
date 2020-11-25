@@ -33,7 +33,6 @@ public class CustomerController {
 
     @PostMapping
     public void saveCustomer(@RequestBody Customer customer){
-        //customer.setId(UUID.randomUUID());
         customerService.saveCustomer(customer);
     }
 
