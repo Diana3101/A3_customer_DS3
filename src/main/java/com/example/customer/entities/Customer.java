@@ -1,4 +1,4 @@
-package customer.entities;
+package com.example.customer.entities;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -9,15 +9,14 @@ public class Customer {
     private UUID customerId;
     private String firstName;
     private String lastName;
-    private Size size;
+    private String size;
 
-    public Customer(){
-
+    public Customer() {
     }
 
-    public Customer(UUID customerId, String firstName, String lastName, Size size) {
+    public Customer(String firstName, String lastName, String size) {
         //this.id = UUID.randomUUID();
-        this.customerId = customerId;
+        this.customerId = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.size = size;
@@ -39,11 +38,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public Size getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(Size size) {
+    public void setSize(String size) {
         this.size = size;
     }
 

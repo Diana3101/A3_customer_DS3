@@ -1,7 +1,5 @@
-package customer.dto;
+package com.example.customer.dto;
 
-
-import customer.entities.Size;
 
 import java.util.UUID;
 
@@ -10,13 +8,12 @@ public class CustomerDTO {
     private UUID id;
     private String firstName;
     private String lastName;
-    private Size size;
+    private String size;
 
     public CustomerDTO() {
     }
 
-    public CustomerDTO(UUID id, String firstName, String lastName, Size size) {
-        this.id = id;
+    public CustomerDTO(String firstName, String lastName, String size) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.size = size;
@@ -46,11 +43,11 @@ public class CustomerDTO {
         this.lastName = lastName;
     }
 
-    public Size getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(Size size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
